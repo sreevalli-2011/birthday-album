@@ -1,0 +1,37 @@
+/* src/pages/AlbumPage.css */
+
+.album-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* This centers the AlbumGrid component horizontally on the page */
+  min-height: 100vh; /* Ensures the container takes up at least the full viewport height */
+  padding-bottom: 50px; /* Add some padding at the bottom for scrollability */
+  position: relative; /* Needed for the ::before pseudo-element to position correctly */
+  z-index: 1; /* Ensures this container is above the body, but below the overlay */
+  
+
+  /* Transparent Birthday Background Image */
+  background-image: url('/public/images/bg_album.jpg'); /* This URL must be correct and accessible */
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents background image from repeating */
+  background-attachment: fixed; /* Keeps background fixed when scrolling */
+}
+
+/* Overlay for Transparency */
+.album-page-container::before {
+  content: ""; /* Required for pseudo-elements */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(70, 68, 68, 0.7); /* White overlay with 70% opacity for transparency */
+  z-index: -1; /* Puts the overlay behind the content of album-page-container */
+}
+.album-page-container h2 { /* Targeting the h2 specifically */
+  font-family: 'Montserrat',;
+  font-size: 2em; /* Adjust size as needed */
+  color: #f7f5f5;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}

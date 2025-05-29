@@ -1,0 +1,62 @@
+/* src/components/AlbumGrid.css */
+
+/* Container for the entire flipbook component's background */
+.album-grid-container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Styling for each individual page within the flipbook */
+.album-page {
+  background-color: #f8f9fa; /* Light background for the pages */
+  display: flex;
+  flex-direction: column;
+  /* Changed justify-content to stretch or flex-start to allow image to grow */
+  justify-content: flex-start; /* Aligns content to the top. Image will fill downwards. */
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  padding: 0; /* REMOVED PADDING from the page itself to maximize image space */
+}
+
+/* Styling for images inside the album pages */
+.album-page img {
+  width: 100%; /* Make image take full width of its container */
+  height: 100%; /* Make image take full height of its container */
+  object-fit: contain; /* Ensures the entire image is visible, adds letterboxing if aspect ratios differ */
+  display: block;
+  /* REMOVED max-height: 95%; as height: 100% with object-fit: contain is better */
+}
+
+/* Styling for the page number */
+.page-number {
+  position: absolute;
+  bottom: 10px; /* Distance from the bottom of the page */
+  right: 15px; /* Distance from the right of the page */
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  z-index: 2; /* Ensure it's above the image */
+}
+
+/* Additional styling for the HTMLFlipBook component itself */
+.demo-book {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Media queries for fine-tuning responsiveness */
+@media (max-width: 768px) {
+  .album-grid-container {
+    padding: 10px;
+    min-height: 60vh;
+  }
+}

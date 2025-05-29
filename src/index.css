@@ -1,0 +1,13 @@
+/* src/index.css */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #f8f9fa; /* A very light gray for the overall body background */
+  color: #212529; /* Default text color dark */
+}

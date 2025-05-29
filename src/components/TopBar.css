@@ -1,0 +1,74 @@
+/* src/components/TopBar.css */
+
+.navbar-brand {
+  display: flex; /* Makes logo and brand text flexible */
+  align-items: center; /* Vertically centers logo and text */
+}
+
+/* Logo Styling */
+.brand-logo {
+  /* Set a fixed size for the logo that you desire, e.g., 60px or 80px */
+  width: 80px;  /* Fixed width for the logo */
+  height: 80px; /* Fixed height for the logo */
+  object-fit: contain; /* Ensures the entire image fits within the 80x80 box without cropping */
+  margin-right: 15px; /* Space between logo and text */
+}
+
+.brand-text {
+  font-family: 'Lora', serif;
+  font-size: 1.5rem; /* Default for larger screens */
+  font-weight: 700;
+  /* margin-left was removed because margin-right on logo handles spacing now */
+}
+
+/* Contact Info Styling */
+.contact-info {
+  display: flex; /* Makes icon and number flexible */
+  align-items: center; /* Vertically centers icon and number */
+  /* Bootstrap's ml-auto on the parent div handles pushing it right */
+}
+
+.contact-icon {
+  font-size: 1.2rem; /* Size of the phone icon */
+  margin-right: 0.5rem; /* Space between icon and number */
+  line-height: 1; /* Helps vertical alignment */
+}
+
+/* Adjustments for smaller screens (mobile responsiveness) */
+@media (max-width: 767.98px) {
+  /* Logo adjustments for mobile */
+  .brand-logo {
+    width: 70px;  /* Smaller fixed width on mobile */
+    height: 70px; /* Smaller fixed height on mobile */
+    margin-right: 10px; /* Less space on mobile */
+  }
+
+  .brand-text {
+    font-size: 1rem; /* Smaller font size on mobile */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px; /* Adjust as needed to prevent cutoff */
+  }
+
+  .contact-info {
+    font-size: 1.9rem; /* Smaller font for contact on mobile */
+    margin-top: 10px; /* Add some space if it wraps below brand info on mobile */
+    /* No specific horizontal alignment needed here beyond d-flex on parent as it will stack */
+  }
+
+  .contact-icon {
+    font-size: 0.9rem; /* Smaller icon on mobile */
+  }
+}
+.contact-info a {
+  font-size: 1em; /* Adjust this value as needed, e.g., 1.2em, 16px, 18px */
+  font-weight: bold; /* Optional: Make it bold */
+  /* Add other styles if desired, e.g., color, line-height */
+}
+
+/* Optional: Adjust icon size if needed */
+.contact-icon {
+  font-size: 1.1em; /* Make the icon size match the text */
+  /* Or a fixed pixel size, e.g., 18px */
+}
