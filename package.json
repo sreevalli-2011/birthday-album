@@ -3,6 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "description": "A React project for a personalized birthday photo album.", 
+  "author": "K. Sreevalli <valliwebworkz@gmail.com>", 
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sreevalli-2011/birthday-album.git" 
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
